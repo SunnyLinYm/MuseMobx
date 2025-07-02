@@ -1,0 +1,45 @@
+﻿{
+	"compilerOptions": {
+		"baseUrl": ".",
+		//非常好用的 ex: import {*} from '*/command/addevele'
+		//但 storybook 看不懂要在 .storybook/main.js 設定
+		"paths": {
+			"@/*": [ "./src/*" ]
+		},
+		"experimentalDecorators": true,
+		"skipLibCheck": true,
+		"target": "es5",
+		"outDir": "./dist-muse-mobx",
+		"allowJs": true, //編譯 *.js 文件 , 要多 "outDir" 屬性才不會有 TS5055 問題
+		"strict": true,
+		"esModuleInterop": true,
+		"sourceMap": true,
+		"jsx": "react-jsx", // React 18 推薦使用這個
+		//"target": "ES5",
+		//"module": "ES5",
+		"moduleResolution": "node",
+		"allowSyntheticDefaultImports": true, /* 允許從沒有默認導出的模塊中默認導入。 這不會影響代碼發出，只會影響類型檢查。 */
+		"strictPropertyInitialization": false, // TS2564 初始化未赋值错误
+		//"experimentalDecorators": true,
+		//"esModuleInterop": true, /* 通過為所有導入創建命名空間對象，啟用 CommonJS 和 ES 模塊之間的發射互操作性。 暗示“allowSyntheticDefaultImports”。 */
+		"lib": [ // 為了確保瀏覽器環境的型別和 ESNext 功能被識別
+			"dom",
+			"dom.iterable",
+			"esnext"
+		]
+	},
+	"include": [
+		"src/**/**.ts",
+		"src/**/**.tsx",
+		"src/**/**.d.ts",
+		"muse_mobx/**/**.ts",
+		"muse_mobx/**/**.tsx",
+		"types/**/*.d.ts",
+		"src/**/*.js", // 如果有 .js 檔案，且您希望 TypeScript 檢查它們
+		"muse_mobx/**/*.js" // 如果 muse 目錄下有 .js 檔案
+	],
+	"exclude": [
+		"node_modules" // 排除 node_modules 目錄，通常不需要型別檢查這個目錄
+	]
+
+}

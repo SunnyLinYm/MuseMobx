@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+	<div>SVG x:y <span id="svgxy">3,4</span></div>
+	<div>Element x:y <span id="elexy">3,4</span></div>
+	<div id="warnings"></div>
+	<div id="canvas"></div>
+	<div id="muse"></div>
+	<div id="root"></div>
+
+	<link href="build.css" media="screen" rel="stylesheet" type="text/css" />
+
+	<script src="build.js" type="text/javascript"></script>
+	<script src="abc.js" type="text/javascript"></script>
+	<script src="muse.js" type="text/javascript"></script>
+	<script>
+		var abcParser;
+		var tune;
+		var paper;
+		var printer;
+		const doRendering = () => {
+			let canvasDiv = document.getElementById("canvas");
+			let warningDiv = document.getElementById("warnings");
+
+			abcParser = new abc.AbcParse();
+			abcParser.parse("X:1\nT:cotitile\nA|Bab|cd ef|"); //TODO handle multiple tunes
+			tune = abcParser.getTune();
+			paper = new abc.Svg(canvasDiv);
+			paper.setSize(800, 400)
+			printer = new abc.ABCPrinter(paper);
+			printer.printABC(tune);
+
+			if (warningDiv) {
+				const warnings = abcParser.getWarnings();
+				warningDiv.innerHTML = warnings?.length ? warnings.join("<br />") : "No errors";
+			}
+
+			//This.printer.addSelectListener(This);
+			//This.updateSelection();
+			//This.bReentry = false;
+		};
+
+		doRendering();
+	</script>
+
+</body>
+</html>
+
+
+

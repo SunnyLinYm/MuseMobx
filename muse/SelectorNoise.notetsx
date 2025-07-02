@@ -1,0 +1,146 @@
+import { Row } from "./MuseRow";
+import { Paragraph } from "./MuseParagraph";
+import { Notation } from "./MuseNotation";
+import { Noise, SubNoise } from "./MuseNoise";
+import { Page } from "./MusePage";
+import { Measure } from "./MuseMeasure";
+
+
+//Note ->> Noise
+//SubNote-- >> SubNoise
+//Bar-- >> Row
+//Track ->> Measure
+//Line ->> Paragraph
+
+
+export interface SelectionSubNoise {
+  setSelect: (i: boolean) => void;
+  getThis: () => SubNoise;
+  setNum: (n: string) => void;
+  reducePoint: (h: number) => void;
+  reduceParagraph: (l: number) => void;
+  reduceTailPoint: (p: number) => void;
+}
+
+export interface SelectionNoise {
+  setSelect: (i: boolean) => void;
+  getThis: () => Noise;
+  reduceParagraph: (l: number) => void;
+  reduceTailPoint: (p: number) => void;
+  addSubNoise: (index: number) => void;
+  removeSubNoise: (index: number) => void;
+}
+
+export interface SelectionRow {
+  setSelect: (i: boolean) => void;
+  getThis: () => Row;
+  addNoise: (index: number) => void;
+  removeNoise: (index: number) => void;
+}
+
+export interface SelectionMeasure {
+  setSelect: (s: boolean) => void;
+  getThis: () => Measure;
+  addRow: (index: number) => void;
+  removeRow: (index: number) => void;
+}
+
+export interface SelectionParagraph {
+  setSelect: (s: boolean) => void;
+  getThis: () => Paragraph;
+  addMeasure: (index: number) => void;
+  removeMeasure: (index: number) => void;
+}
+
+export interface SelectionPage {
+  setSelect: (s: boolean) => void;
+  getThis: () => Page;
+  addParagraph: (index: number) => void;
+  removeParagraph: (index: number) => void;
+}
+
+export interface SelectionNotation {
+  setSelect: (s: boolean) => void;
+  getThis: () => Notation;
+  addPage: (index: number) => void;
+  reomvePage: (index: number) => void;
+}
+export interface SelectionNoise { }
+export interface SelectionSubNoise { }
+export interface SelectionRow { }
+export interface SelectionParagraph { }
+export interface SelectionMeasure { }
+
+
+
+class Selector {
+    subnoise: SelectionSubNoise | null = null;
+    noise: SelectionNoise | null = null;
+    row: SelectionRow | null = null;
+    measure: SelectionMeasure | null = null;
+    paragraph: SelectionParagraph | null = null;
+    page: SelectionPage | null = null;
+    notation: SelectionNotation | null = null;
+    static instance = new Selector();
+    private constructor() {
+        document.addEventListener("keydown", (ev) => {
+            if (!this.keySubNoise(ev)) {
+                if (!this.keyNoise(ev)) {
+                    if (!this.keyRow(ev)) {
+                        if (!this.keyMeasure(ev)) {
+                            if (!this.keyParagraph(ev)) {
+                                if (!this.keyPage(ev)) {
+                                    if (this.keyNotation(ev)) ev.returnValue = false;
+                                } else ev.returnValue = false;
+                            } else ev.returnValue = false;
+                        } else ev.returnValue = false;
+                    } else ev.returnValue = false;
+                } else ev.returnValue = false;
+            } else ev.returnValue = false;
+        });
+    }
+    selectSubNoise(s: SelectionSubNoise) {
+        this.subnoise?.setSelect(false);
+        this.subnoise = s;
+        this.subnoise.setSelect(true);
+        this.selectNoise(s.getThis().noise);
+    }
+    selectNoise(s: SelectionNoise) {
+        this.noise?.setSelect(false);
+        this.noise = s;
+        if (this.subnoise === null) this.noise.setSelect(true);
+        this.selectRow(s.getThis().row);
+    }
+    selectRow(s: SelectionRow) {
+        this.row?.setSelect(false);
+        this.row = s;
+        if (this.noise === null) this.row.setSelect(true);
+        this.selectMeasure(s.getThis().measure);
+    }
+    selectMeasure(s: SelectionMeasure) {
+        this.measure?.setSelect(false);
+        this.measure = s;
+        if (this.row === null) this.measure.setSelect(true);
+        this.selectParagraph(s.getThis().paragraph);
+    }
+    selectParagraph(s: SelectionParagraph) {
+        this.paragraph?.setSelect(false);
+        this.paragraph = s;
+        if (this.measure === null) this.paragraph.setSelect(true);
+        this.selectPage(s.getThis().page);
+    }
+    selectPage(s: SelectionPage) {
+        this.page?.setSelect(false);
+        this.page = s;
+        if (this.paragraph === null) this.page.setSelect(true);
+        this.selectNotation(s.getThis().notation);
+    }
+    selectNotation(s: SelectionNotation) {
+        this.notation?.setSelect(false);
+        this.notation = s;
+        if (this.page === null) this.notation.setSelect(true);
+    }
+
+}
+
+export default Selector;

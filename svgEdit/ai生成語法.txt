@@ -1,0 +1,50 @@
+﻿用 react/mobx(typescript) 寫一個例子svg/edit, 
+可以
+繪 circle,rect,text
+修改 circle,rect,text
+移動 circle,rect,text
+---------------
+多容器元素類，
+(circle,rect,text 元素) 可移進容器，也可以移出來
+-----------------------
+
+1.有 toolbar->移動,修改,undo,redo, 容器元素 , 繪circle,繪rect,繪text
+2.有 undo /redo 功能,鍵盤 Ctrl+z/Ctrl+y
+3.滑鼠移動到元件會有虛線外框(Mark)
+4.選擇元件會有實線外框(Mark)
+5.容器元素類，(circle,rect,text 元素) 可移進容器，也可以移出來
+-----------------------
+
+-------------------
+完整寫出
+App.tsx/SVGEditor.tsx/SVGContainer.tsx/ToolBar.tsx/EditorStore.ts/useKeyboardShortcuts.ts
+
+
+
+
+用 react/mobx(typescript) 寫一個例子svg/edit, 
+1.有 toolbar->移動,修改,undo,redo, 容器元素 , 繪circle,繪rect,繪text
+2.有 undo /redo 功能,鍵盤 Ctrl+z/Ctrl+y
+3.滑鼠移動到元件會有虛線外框(Mark)
+4.選擇元件會有實線外框(Mark)
+5.容器元素類，(circle,rect,text 元素) 可移進容器，也可以移出來
+
+----------------------------------
+可繪元素 1.容器 , 2.circle,3.rect,4.text 
+可移動,修改 (1.容器 , 2.circle,3.rect,4.text)元素,
+
+
+
+33.--------------------
+用 react/mobx-state-tree (typescript) 寫一個例子svg/edit, 
+可以
+繪 circle,rect,text,容器
+修改 circle,rect,text,容器
+移動 circle,rect,text,容器
+-------
+1.容器要有顏色
+2.(circle,rect,text 元素) 可移進容器，也可以移出來
+3.滑鼠移動到元件會有虛線外框(Mark)
+4.滑鼠選擇元件會有實線外框(Mark)
+
+---

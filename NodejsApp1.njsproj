@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{0dd312b9-6e78-4f49-ad15-350f319801cc}</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectView>ShowAllFiles</ProjectView>
+    <StartupFile />
+    <WorkingDirectory>.</WorkingDirectory>
+    <OutputPath>.</OutputPath>
+    <ProjectTypeGuids>{3AF33F2E-1136-4D97-BBB7-1795711AC8B8};{349c5851-65df-11da-9384-00065b846f21};{9092AA53-FB77-4645-B42D-1CCCA6BD08BD}</ProjectTypeGuids>
+    <EnableTypeScript>true</EnableTypeScript>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">16.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)' == 'Debug'" />
+  <PropertyGroup Condition="'$(Configuration)' == 'Release'" />
+  <ItemGroup>
+    <Content Include=".editorconfig" />
+    <Content Include=".gitignore" />
+    <Content Include="abcjs\.editorconfig" />
+    <Content Include="abcjs\abc_editor.html" />
+    <Content Include="abcjs\abc_editor.js" />
+    <Content Include="abcjs\abc_glyphs.js" />
+    <Content Include="abcjs\abc_graphelements.js" />
+    <Content Include="abcjs\abc_layout.js" />
+    <Content Include="abcjs\abc_midiwriter.js" />
+    <Content Include="abcjs\abc_parse.js" />
+    <Content Include="abcjs\abc_parser_lint.js" />
+    <Content Include="abcjs\abc_parse_header.js" />
+    <Content Include="abcjs\abc_plugin.html" />
+    <Content Include="abcjs\abc_plugin.js" />
+    <Content Include="abcjs\abc_tokenizer.js" />
+    <Content Include="abcjs\abc_tune.js" />
+    <Content Include="abcjs\abc_tunebook.js" />
+    <Content Include="abcjs\abc_write.js" />
+    <Content Include="abcjs\application.js" />
+    <Content Include="abcjs\Emmentaler_400.font.js" />
+    <Content Include="abcjs\font_gen.html" />
+    <Content Include="abcjs\jquery-1.4.2.min.js" />
+    <Content Include="abcjs\jsonschema-b4.js" />
+    <Content Include="abcjs\minify.sh" />
+    <Content Include="abcjs\music.css" />
+    <Content Include="abcjs\nospam.js" />
+    <Content Include="abcjs\play_embedded.js" />
+    <Content Include="abcjs\proto.js" />
+    <Content Include="abcjs\prototype.js" />
+    <Content Include="abcjs\proto_noconflict.js" />
+    <Content Include="abcjs\raphael.js" />
+    <Content Include="abcjs\scaffold.css" />
+    <Content Include="abcjs\scalefont.js" />
+    <Content Include="abcjs\scalefontemmentaler.js" />
+    <Content Include="abcjs\sprintf.js" />
+    <Content Include="abcjs\wav_generator.js" />
+    <Content Include="abcjs\workspace %282%29.html" />
+    <Content Include="abcjs\workspace.css" />
+    <Content Include="abcjs\workspace.html" />
+    <Content Include="abcjs\yuicompressor-2.4.2.jar" />
+    <Content Include="esbuild.js" />
+    <Content Include="esbuildMuseMobx.js" />
+    <Content Include="esbuildReact.config.js" />
+    <Content Include="esbuildReact.js" />
+    <Content Include="LICENSE.txt" />
+    <Content Include="index.html" />
+    <Content Include="muse\a.json" />
+    <Content Include="muse\app.css" />
+    <Content Include="muse\b.json" />
+    <Content Include="muse\MuseBar2" />
+    <Content Include="muse\SelectorNoise.notetsx" />
+    <Content Include="muse_mobx\index.html" />
+    <Content Include="package-lock.json" />
+    <Content Include="package.json" />
+    <Content Include="svgEdit\ai生成語法.txt" />
+    <Content Include="svgEdit\index.html" />
+    <Content Include="svgEdit\index2.html" />
+    <Content Include="svgEdit\menu.css" />
+    <Content Include="svgEdit\toolbar.css" />
+    <Content Include="CHANGELOG.md" />
+    <Content Include="README.md" />
+    <Content Include="src\abc_plugin.html" />
+    <Content Include="src\font.gen.html" />
+    <Content Include="src\workspace.html" />
+    <Content Include="src\music.css" />
+    <Content Include="src\scaffold.css" />
+    <Content Include="src\workspace.css" />
+    <Content  Include="tsconfig.json" />
+    <None Include="src\abc_editor.ts" />
+    <None Include="src\abc_glyphs.ts" />
+    <None Include="src\abc_graphelements.ts" />
+    <None Include="src\abc_layout.ts" />
+    <None Include="src\abc_midiwriter.ts" />
+    <None Include="src\abc_parse.ts" />
+    <None Include="src\abc_parser_lint.ts" />
+    <None Include="src\abc_parse_header.ts" />
+    <None Include="src\abc_plugin.ts" />
+    <None Include="src\abc_tokenizer.ts" />
+    <None Include="src\abc_tune.ts" />
+    <None Include="src\abc_tunebook.ts" />
+    <None Include="src\abc_write.ts" />
+    <None Include="src\all.d.ts" />
+    <None Include="src\application.ts" />
+    <None Include="src\play_embedded.ts" />
+    <None Include="src\proto.ts" />
+    <None Include="src\scalefont.ts" />
+    <None Include="src\sprintf.ts" />
+    <None Include="src\string_extension.ts" />
+    <None Include="src\svg.ts" />
+    <None Include="src\wav_generator.ts" />
+    <None Include="src\_extension.d.ts" />
+    <None Include="src\_svg.d.ts" />
+    <None Include="types\jsonschema\index.d.ts" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="abcjs\" />
+    <Folder Include="muse\" />
+    <Folder Include="muse_mobx\" />
+    <Folder Include="muse_mobx\models\" />
+    <Folder Include="src" />
+    <Folder Include="svgEdit\" />
+    <Folder Include="types" />
+    <Folder Include="types\jsonschema" />
+  </ItemGroup>
+  <ItemGroup>
+    <TypeScriptCompile Include="muse\Border.tsx" />
+    <TypeScriptCompile Include="muse\Codec.tsx" />
+    <TypeScriptCompile Include="muse\Fraction.tsx" />
+    <TypeScriptCompile Include="muse\index.tsx" />
+    <TypeScriptCompile Include="muse\Muse.tsx" />
+    <TypeScriptCompile Include="muse\MuseBar.tsx" />
+    <TypeScriptCompile Include="muse\MuseConfig.tsx" />
+    <TypeScriptCompile Include="muse\MuseLine.tsx" />
+    <TypeScriptCompile Include="muse\MuseMeasure.tsx" />
+    <TypeScriptCompile Include="muse\MuseNoise.tsx" />
+    <TypeScriptCompile Include="muse\MuseNotation.tsx" />
+    <TypeScriptCompile Include="muse\MuseNote.tsx" />
+    <TypeScriptCompile Include="muse\MusePage.tsx" />
+    <TypeScriptCompile Include="muse\MuseParagraph.tsx" />
+    <TypeScriptCompile Include="muse\MuseRow.tsx" />
+    <TypeScriptCompile Include="muse\MuseTrack.tsx" />
+    <TypeScriptCompile Include="muse\Selector.tsx" />
+    <TypeScriptCompile Include="muse\zBar.tsx" />
+    <TypeScriptCompile Include="muse\ZNote.tsx" />
+    <TypeScriptCompile Include="muse\ZSelector.tsx" />
+    <TypeScriptCompile Include="muse_mobx\Border.tsx" />
+    <TypeScriptCompile Include="muse_mobx\Codec.tsx" />
+    <TypeScriptCompile Include="muse_mobx\Fraction.tsx" />
+    <TypeScriptCompile Include="muse_mobx\models\RootStore.ts" />
+    <TypeScriptCompile Include="muse_mobx\index.tsx" />
+    <TypeScriptCompile Include="muse_mobx\Muse.tsx" />
+    <TypeScriptCompile Include="muse_mobx\MuseBar.tsx" />
+    <TypeScriptCompile Include="muse_mobx\MuseConfig.tsx" />
+    <TypeScriptCompile Include="muse_mobx\MuseLine.tsx" />
+    <TypeScriptCompile Include="muse_mobx\MuseNotation.tsx" />
+    <TypeScriptCompile Include="muse_mobx\MuseNote.tsx" />
+    <TypeScriptCompile Include="muse_mobx\MusePage.tsx" />
+    <TypeScriptCompile Include="muse_mobx\MuseTrack.tsx" />
+    <TypeScriptCompile Include="muse_mobx\Selector.tsx" />
+    <TypeScriptCompile Include="muse_mobx\ai文檔.txt">
+      <SubType>Code</SubType>
+    </TypeScriptCompile>
+    <TypeScriptCompile Include="svgEdit\ContainerModel.ts" />
+    <TypeScriptCompile Include="svgEdit\EditorStore.ts" />
+    <TypeScriptCompile Include="svgEdit\index - 複製.tsx" />
+    <TypeScriptCompile Include="svgEdit\index.tsx" />
+    <TypeScriptCompile Include="svgEdit\menu.tsx" />
+    <TypeScriptCompile Include="svgEdit\store.ts" />
+    <TypeScriptCompile Include="svgEdit\SvgCanvas.tsx" />
+    <TypeScriptCompile Include="svgEdit\SVGContainer.tsx" />
+    <TypeScriptCompile Include="svgEdit\SVGE - 複製.tsx" />
+    <TypeScriptCompile Include="svgEdit\SVGE.tsx" />
+    <TypeScriptCompile Include="svgEdit\SVGEditor.tsx" />
+    <TypeScriptCompile Include="svgEdit\ToolBar.tsx" />
+    <TypeScriptCompile Include="svgEdit\useKeyboardShortcuts.ts" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.Common.targets" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <Import Project="$(VSToolsPath)\Node.js Tools\Microsoft.NodejsToolsV2.targets" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>False</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>0</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:48022/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost:1337</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

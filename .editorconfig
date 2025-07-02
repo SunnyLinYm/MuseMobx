@@ -1,0 +1,2 @@
+﻿[*.{cs,csx,vb,vbx,txt,html,htm,css,js,jsx,ts,tsx,md,json,yml,yaml,xml,config,ini,sh,ps1,psm1,psd1,ps1xml,psrc1xml,csproj,sln,gitignore,gitattributes,editorconfig,md,markdown,txt,asciidoc,adoc,asc,asciidoc,txt,ipynb,py}]
+charset = utf-8-bom

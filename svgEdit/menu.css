@@ -1,0 +1,39 @@
+﻿.enu-container {
+  display: flex;
+  align-items: center;
+  padding: 0 20px;
+  height: 60px;
+  background: #f8f9fa;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  font-family: 'Segoe UI', sans-serif;
+}
+
+.menu-logo {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #4a6fa5;
+  margin-right: auto;
+}
+
+.menu-actions {
+  display: flex;
+  gap: 15px;
+}
+
+.menu-button {
+  padding: 8px 16px;
+  border: 1px solid #e0e0e0;
+  border-radius: 6px;
+  background: white;
+  color: #555;
+  cursor: pointer;
+  transition: all 0.2s;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+  .menu-button:hover {
+    background: #f0f0f0;
+    border-color: #d0d0d0;
+  }
